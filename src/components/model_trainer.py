@@ -85,8 +85,7 @@ class ModelTrainer:
                     'learning_rate':[.1,.01,0.5,.001],
                     # 'loss':['linear','square','exponential'],
                     'n_estimators': [8,16,32,64,128,256]
-                }
-                
+                }                
             }
 
             model_report:dict=evaluate_models(X_train=X_train,y_train=y_train,X_test=X_test,y_test=y_test,
@@ -113,6 +112,5 @@ class ModelTrainer:
 
  
         
-
         except Exception as e:
             raise CustomException(e,sys)
